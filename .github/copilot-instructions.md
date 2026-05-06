@@ -29,10 +29,11 @@ Este repositorio es material de clase. Los estudiantes deben **aprender haciendo
 
 ## Stack del repositorio
 
-- **Java 17**, **Maven**, aplicación web tipo **WAR** con **Jetty** (`mvn jetty:run`).
+- **Java 17**, **Maven**, aplicación web tipo **WAR** desplegada en **Apache Tomcat 9** con **Cargo** (`mvn cargo:run`; mismo modelo mental que Tomcat en el curso).
 - **javax.servlet** (Servlet 3.1 / JSP clásicos), alineado con material introductorio.
 - **MySQL 8** en Codespace: host `db`, puerto `3306`, base `curso_web`, usuario `estudiante` (según variables del devcontainer). JDBC típico: `jdbc:mysql://db:3306/curso_web`.
-- Temas del curso: HTTP, JSP, Servlets, EJB (solo conceptos si aplica), MVC, JDBC, DAO/DTO, APIs sencillas en Java cuando el docente lo indique.
+- En las primeras clases (Servlets/JSP): **solo API estándar** (`javax.servlet`, JSP); sin librerías extra tipo JSON u otras.
+- Temas del curso: HTTP, JSP, Servlets, EJB (solo conceptos si aplica), MVC, JDBC, DAO/DTO (el conector MySQL en el `pom` es para el módulo de base de datos, no para la clase básica de Servlets).
 
 ## Estilo de respuesta
 

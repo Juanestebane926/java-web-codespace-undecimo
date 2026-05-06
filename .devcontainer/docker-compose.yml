@@ -3,8 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    # Codespaces clona en /workspaces/<nombre-repo>; el workspace debe coincidir para que .github y Copilot vean la raíz del proyecto.
     volumes:
-      - ..:/workspaces:cached
+      - ..:/workspaces/${localWorkspaceFolderBasename}:cached
     command: sleep infinity
     depends_on:
       db:

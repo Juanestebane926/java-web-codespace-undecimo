@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Tomcat: iniciar (mvn cargo:run)",
+      "type": "shell",
+      "command": "mvn cargo:run",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {}
+      },
+      "group": "none",
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "owner": "tomcat-cargo",
+          "pattern": {
+            "regexp": "^$"
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".",
+            "endsPattern": "Server startup in \\[[0-9]+\\] milliseconds|Server startup in [0-9]+ milliseconds"
+          }
+        }
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": false
+      }
+    },
+    {
+      "label": "Maven: compilar WAR (package)",
+      "type": "shell",
+      "command": "mvn -DskipTests package",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$javac"]
+    }
+  ]
+}

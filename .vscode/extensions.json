@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vscjava.vscode-java-pack",
+    "vscjava.vscode-maven",
+    "pthorsson.vscode-jsp",
+    "redhat.vscode-xml",
+    "GitHub.copilot",
+    "GitHub.copilot-chat"
+  ]
+}

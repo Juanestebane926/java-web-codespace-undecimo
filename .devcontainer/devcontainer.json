@@ -1,13 +1,13 @@
 {
-  "name": "Curso Java Web (Java 17 + Maven + MySQL)",
+  "name": "Curso Java Web (Java 17 + Maven + Tomcat 9 + MySQL)",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspaces",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "remoteUser": "vscode",
   "forwardPorts": [8080, 3306],
   "portsAttributes": {
     "8080": {
-      "label": "Aplicación web (Jetty)",
+      "label": "Aplicación web (Tomcat)",
       "onAutoForward": "notify"
     },
     "3306": {
@@ -19,12 +19,19 @@
     "vscode": {
       "extensions": [
         "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "pthorsson.vscode-jsp",
+        "redhat.vscode-xml",
         "GitHub.copilot",
         "GitHub.copilot-chat"
       ],
       "settings": {
         "java.configuration.updateBuildConfiguration": "automatic",
-        "java.compile.nullAnalysis.mode": "disabled"
+        "java.compile.nullAnalysis.mode": "disabled",
+        "java.import.maven.enabled": true,
+        "java.autobuild.enabled": true,
+        "maven.terminal.useJavaHome": true,
+        "xml.server.preferBinary": true
       }
     }
   },
