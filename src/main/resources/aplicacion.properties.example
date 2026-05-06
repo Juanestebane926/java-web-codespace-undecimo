@@ -1,0 +1,5 @@
+# Copia este archivo a aplicacion.properties y ajusta valores (no subas secretos a Git).
+# En Codespaces, el host de MySQL es el nombre del servicio Docker: db
+db.url=jdbc:mysql://db:3306/curso_web?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+db.user=estudiante
+db.password=estudiante

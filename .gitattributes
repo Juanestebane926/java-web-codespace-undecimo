@@ -1,0 +1,3 @@
+# Scripts y devcontainer en Linux/Codespaces
+*.sh text eol=lf
+.devcontainer/** text eol=lf
