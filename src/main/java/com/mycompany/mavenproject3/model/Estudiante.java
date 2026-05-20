@@ -1,0 +1,45 @@
+package com.mycompany.mavenproject3.model;
+
+public class Estudiante {
+
+    private String nombre;
+    private int edad;
+    private double nota;
+
+    public Estudiante() {
+    }
+
+    public Estudiante(String nombre, int edad, double nota) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.nota = nota;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+
+    public String getEstadoAcademico() {
+        return nota >= 3.0 ? "Aprobado" : "Reprobado";
+    }
+}
